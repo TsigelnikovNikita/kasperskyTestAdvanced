@@ -26,13 +26,13 @@ namespace Suspicions
         , MacOsSuspicion
     };
 
-    constexpr int suspicionCount = 3;
-    constexpr std::array<Suspicion, suspicionCount> suspicionArray = {
+    inline constexpr int suspicionCount = 3;
+    inline constexpr std::array<Suspicion, suspicionCount> suspicionArray = {
             Suspicion{SuspicionType::JsSuspicion, "<script>evil_script()</script>"}
             , Suspicion{SuspicionType::UnixSuspicion, "rm -rf ~/Documents"}
             , Suspicion{SuspicionType::MacOsSuspicion, "system(\"launchctl load /Library/LaunchAgents/com.malware.agent\")"}
     };
-    constexpr std::array<std::string_view, suspicionCount> suspicionNames = {
+    inline constexpr std::array<std::string_view, suspicionCount> suspicionNames = {
             "JS"
             , "Unix"
             , "macOS"
